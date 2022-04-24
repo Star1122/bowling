@@ -1,0 +1,52 @@
+.bowling-frame-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-width: 1px;
+  border-style: solid;
+  transition-duration: 0.25s;
+
+  &.active-frame {
+    background-color: #b21717;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+  .score-text {
+    grid-column: 1 / span 3;
+
+    .chip-wrapper {
+      padding: 0.25rem 0.5rem;
+
+      .value {
+        text-align: left;
+      }
+    }
+  }
+
+  .chip-wrapper {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+
+    .value {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .roll {
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+
+    &:first-of-type {
+      border-width: 0 0 1px 0;
+    }
+  }
+
+  & > .chip-wrapper {
+    .value {
+      width: 2.5rem;
+      box-sizing: content-box;
+    }
+  }
+}

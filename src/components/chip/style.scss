@@ -1,0 +1,37 @@
+.chip-wrapper {
+  height: fit-content;
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 0.5rem;
+
+  .label {
+    font-weight: 600;
+  }
+
+  .value {
+    margin: 0 0 0 0.25rem;
+    height: 1.25rem;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+
+    span {
+      line-height: 1;
+
+      &.empty {
+        opacity: 0;
+      }
+
+      &.changing {
+        position: relative;
+        margin-top: -1.25rem;
+        transition-duration: .25s;
+        transition-property: margin-top;
+      }
+    }
+  }
+}
